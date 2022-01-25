@@ -34,8 +34,8 @@ public class EmployeePayrollDBService {
 			ResultSet resultSet = statement.executeQuery(sqlStatement);
 			
 			while(resultSet.next()) {
-				int id = resultSet.getInt("id");
-				String name = resultSet.getString("name");
+				int id = resultSet.getInt("Id");
+				String name = resultSet.getString("Name");
 				double salary = resultSet.getDouble("salary");
 				LocalDate startDate = resultSet.getDate("start").toLocalDate();
 				employeePayrollList.add(new EmployeePayrollData(id, name, salary, startDate));
